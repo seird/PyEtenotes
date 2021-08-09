@@ -1,0 +1,23 @@
+QGroupBox::title {
+    color: #4B7B19;
+}
+
+QToolTip {
+    color: #F9F9F9;
+    background-color: #4D7F1A;
+}
+
+QPushButton:hover {
+    color: white;
+    background-color: #4D7F1A;
+}
+
+QMenuBar::item:selected {
+    color: white;
+    background-color: #4D7F1A;
+}
+
+QTabBar::tab:hover {
+    color: white;
+    background-color: #4D7F1A;
+}

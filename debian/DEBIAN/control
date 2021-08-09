@@ -1,0 +1,6 @@
+Package: pyetenotes
+Version: 0.0.1
+Architecture: amd64
+Maintainer: k.dries@protonmail.com
+Description: pyetenotes
+ A PyQt desktop client for Etesync Notes.

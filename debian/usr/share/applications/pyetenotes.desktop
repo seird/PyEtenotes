@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=pyetenotes
+Comment=A PyQt desktop client for Etesync Notes.
+Path=/usr/lib/pyetenotes
+Exec=/usr/lib/pyetenotes/pyetenotes
+Icon=/usr/share/icons/pyetenotes.ico
+Terminal=false
+Type=Application
+Categories=Network;

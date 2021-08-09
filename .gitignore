@@ -1,0 +1,14 @@
+*.xml
+*.log
+*.db.sqlite3
+config.json
+todo.txt
+
+.idea
+.vscode
+__pycache__
+cache
+dist
+build
+inno-output
+*.egg-info
