@@ -26,6 +26,7 @@ DEFAULT_SETTINGS = {
     "style": "default",
     "cache/path": cache_path,
     "tasks/interval": 60,
+    "export/extension": "txt",
     "export/path": QtCore.QStandardPaths.standardLocations(QtCore.QStandardPaths.HomeLocation)[0],
     "notestabwidget/showcolors": True,
     "notestreewidget/showcolors": True,

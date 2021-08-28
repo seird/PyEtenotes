@@ -1,5 +1,7 @@
 # pyetenotes
 
+[![build](https://github.com/seird/pyetenotes/actions/workflows/build.yml/badge.svg)](https://github.com/seird/pyetenotes/actions)
+
 
 A PyQt desktop client for [Etesync Notes](https://github.com/etesync/etesync-notes).
 

@@ -159,7 +159,7 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow, QtCore.QCoreApplication):
         savedir = QtWidgets.QFileDialog.getExistingDirectory(self, "Export", settings.value("export/path", type=str))
         if savedir and os.path.exists(savedir):
             settings.setValue("export/path", savedir)
-            self.export_all_notes_task = ExportNotesTask(notes, savedir)
+            self.export_all_notes_task = ExportNotesTask(notes, savedir, settings.value("export/extension", type=str))
             self.export_all_notes_task.started.connect(self.export_started)
             self.export_all_notes_task.finished.connect(self.export_finished)
             self.export_all_notes_task.failed.connect(self.export_failed)
@@ -179,7 +179,7 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow, QtCore.QCoreApplication):
             self,
             "Export",
             os.path.join(settings.value("export/path", type=str), get_clean_string(note.name)),
-            "*.txt"
+            "*." + settings.value("export/extension", type=str)
         )[0]
 
         if fname and os.path.exists(os.path.dirname(fname)):

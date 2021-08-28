@@ -147,15 +147,22 @@ class DeleteNotebookTask(BaseTask):
 
 
 class ExportNotesTask(BaseTask):
-    def __init__(self, notes: List[Note], savedir: str = ""):
+    def __init__(self, notes: List[Note], savedir: str = "", extension: str = "txt"):
         super(ExportNotesTask, self).__init__()
         self.notes = notes
         self.savedir = savedir
+        self.extension = extension
 
     def task(self):
         for note in self.notes:
-            savename = get_clean_string(note.name) + ".txt"
-            savepath = os.path.join(self.savedir, savename)
+            name = get_clean_string(note.name)
+            savepath = os.path.join(self.savedir, f"{name}.{self.extension}")
+
+            i = 1
+            while os.path.exists(savepath):
+                savepath = os.path.join(self.savedir, f"{name} ({i}).{self.extension}")
+                i += 1
+
             with open(savepath, "wb") as f:
                 f.write(note.content)
 
